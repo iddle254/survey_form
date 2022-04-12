@@ -1,0 +1,43 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% include "header.html" %}
+
+{% block content %}
+
+  <body class="bg-gray-200">
+    <div class="container position-sticky z-index-sticky top-0">
+            <div id="card-header" class="container-fluid ps-2 pe-0 top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4 border-radius-xl">
+              <h1 id="title" class="mx-auto">Kamilimu Wellness Survey</h1>
+            </div>
+    </div>
+    <main>
+      <div
+        class="page-header align-items-start min-vh-100"
+        style="background-image: url('../static/img/bg.JPG')"
+      >
+        <span class="mask bg-gradient-dark opacity-6"></span>
+        <div class="container my-auto">
+          <div class="row">
+            <div class="mx-auto" style="padding-top: 70px">
+              <div class="card z-index-0 fadeIn3 fadeInBottom">
+                <div class="card-body">
+                    <p
+                      id="description"
+                      class="font-weight-bolder text-center mt-2 mb-0"
+                    >
+                      Help us understand how your journey with us has been so
+                      far
+                    </p>
+                   {{ ckeditor.load() }}
+                    {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
+{% endblock %}
