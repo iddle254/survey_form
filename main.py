@@ -29,7 +29,7 @@ class SurveyForm(FlaskForm):
     number = IntegerField('On a scale of 1 to 10, how would you describe your progress since you joined Kamilimu', validators=[DataRequired(), NumberRange(min=1, max=10)], render_kw={'class': 'input-group input-group-outline my-3'})
     dropdown = SelectField('What is your mentor\'s name?:', choices=[('Abdul Rahman Rehmtulla'), ('Beryl Nekesa'), ('Derrick Ngig'), ('Faith Chepkemoi')], validators=[DataRequired()])
     radio_fields = RadioField('Which sessions did you find most beneficial?', choices=[('Scholarship'), ('Professional mentorship'), ('ICT Innovation')], validators=[DataRequired()])
-    check_fields = MultiCheckboxField('Which segment should we improve on?', choices=[('Scholarship'), ('Professional mentorship'), ('ICT Innovation')], validators=[DataRequired()], render_kw={'style': 'margin-bottom:1rem; border:none;'})
+    check_fields = MultiCheckboxField('Which segment should we improve on?', choices=[('Scholarship'), ('Professional mentorship'), ('ICT Innovation')], validators=[DataRequired()], render_kw={'class': 'some-selector', 'style': 'border:none;'})
     comments = CKEditorField("We would appreciate any additional feedback")
     submit = SubmitField('Submit')
 
