@@ -36,7 +36,27 @@
                         </div>
                     {% endif %}
                     {% endwith %}
-                    {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+<!--                    {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}-->
+<!--                    <h3>{{ form.name.label }}</h3>-->
+                    <p>{{ wtf.form_field(form.name) }}</p>
+
+<!--                    <h3>{{ form.email.label }}</h3>-->
+                    <p>{{ wtf.form_field(form.email) }}</p>
+
+<!--                    <h3>{{ form.number.label }}</h3>-->
+                    <p>{{ wtf.form_field(form.number) }}</p>
+
+<!--                    <h3>{{ form.dropdown.label }}</h3>-->
+                    <p>{{ wtf.form_field(form.dropdown) }}</p>
+
+<!--                    <h3>{{ form.radio_fields.label }}</h3>-->
+                    <p>{{ wtf.form_field(form.radio_fields) }}</p>
+
+<!--                    <h3>{{ form.check_fields.label }}</h3>-->
+                    <p>{{ wtf.form_field(form.check_fields) }}</p>
+
+<!--                    <h3>{{ form.comments.label }}</h3>-->
+                    <p style="margin-top:60px;">{{ wtf.form_field(form.comments) }}</p>
                 </div>
               </div>
             </div>
