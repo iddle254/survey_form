@@ -6,10 +6,13 @@ from wtforms import StringField, SubmitField, SelectField, IntegerField, RadioFi
 from wtforms.validators import DataRequired, NumberRange
 from flask_sqlalchemy import SQLAlchemy
 import bleach
+import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6xtigininomahBXox7C0sKR6b'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+##CONNECT TO DB
+app.config['DATABASE_URL1'] = 'postgresql://sifcqwmvmcwdgt:1bd013a8d1fe76af1f4fe09f56119fcc508be6ffa25d8964c905e7d3593f4b75@ec2-34-207-12-160.compute-1.amazonaws.com:5432/d478acdjs7a4a3'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL1",  "sqlite:///db.sqlite")
 Bootstrap(app)
 db = SQLAlchemy(app)
 ckeditor = CKEditor(app)
