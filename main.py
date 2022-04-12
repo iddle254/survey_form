@@ -43,7 +43,7 @@ class SurveyData(db.Model):
     check_fields = db.Column(db.String(100))
     comments = db.Column(db.Text)
 
-db.create_all()
+# db.create_all()
 
 ## strips invalid tags/attributes
 def strip_invalid_html(content):
