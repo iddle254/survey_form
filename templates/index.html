@@ -6,7 +6,7 @@
 
   <body class="bg-gray-200">
     <div class="container position-sticky z-index-sticky top-0">
-            <div id="card-header" class="container-fluid ps-2 pe-0 top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4 border-radius-xl">
+            <div id="card-header" class="container-fluid ps-2 pe-0 top-0 z-index-0 shadow position-absolute my-3 py-2 start-0 end-0 mx-4 border-radius-xl">
               <h1 id="title" class="mx-auto">Kamilimu Wellness Survey</h1>
             </div>
     </div>
@@ -19,16 +19,23 @@
         <div class="container my-auto">
           <div class="row">
             <div class="mx-auto" style="padding-top: 70px">
-              <div class="card z-index-0 fadeIn3 fadeInBottom">
+              <div class="card z-index-3 fadeIn3 fadeInBottom">
                 <div class="card-body">
                     <p
                       id="description"
-                      class="font-weight-bolder text-center mt-2 mb-0"
+                      class="font-weight-bolder text-center mt-2 mb-2"
                     >
                       Help us understand how your journey with us has been so
                       far
                     </p>
                    {{ ckeditor.load() }}
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <div class="notification is-danger">
+                            {{ messages[0] }}
+                        </div>
+                    {% endif %}
+                    {% endwith %}
                     {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
                 </div>
               </div>

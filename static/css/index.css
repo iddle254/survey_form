@@ -1,6 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+#title{
+font-family: 'BIZ UDPMincho', serif;
+font-size: 4.5rem;
+}
+
+p{
+font-size: 2rem;
 }
 
 .bg-gray-200 {
@@ -252,6 +262,7 @@
   background-clip: border-box;
   border: 0 solid rgba(0, 0, 0, 0.125);
   border-radius: 0.75rem;
+  padding: 3% 5%;
 }
 .card > hr {
   margin-right: 0;
@@ -281,10 +292,8 @@ margin-top: 7rem;
 .card-body {
   width: 100%;
   flex: 1 1 auto;
-  padding: 1rem 1rem;
 }
 .card .card-body {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
   padding: 1.5rem;
 }
 .btn {
@@ -376,8 +385,8 @@ margin-top: 7rem;
 .mt-2 {
   margin-top: 0.5rem !important;
 }
-.mb-0 {
-  margin-bottom: 0 !important;
+.mb-2 {
+  margin-bottom: 2rem !important;
 }
 .text-start {
   text-align: left !important;
@@ -387,9 +396,9 @@ margin-top: 7rem;
   width: 100%;
   padding: 0.5rem 0;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.5rem;
-  color: #495057;
+  color: #2A1A5E;
   background-color: transparent;
   background-clip: padding-box;
   border: 1px solid #d2d6da;
@@ -759,11 +768,15 @@ margin-top: 7rem;
 
 label,
 .form-label {
-  font-size: 0.875rem;
+  font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
   color: #7b809a;
   margin-left: 0.25rem;
+}
+
+.some-selector > label {
+margin-bottom: 50px;
 }
 
 .wrapper {
