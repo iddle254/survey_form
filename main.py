@@ -30,8 +30,8 @@ class SurveyForm(FlaskForm):
     dropdown = SelectField('What is your mentor\'s name?:', choices=[('Abdul Rahman Rehmtulla'), ('Beryl Nekesa'), ('Derrick Ngig'), ('Faith Chepkemoi')], validators=[DataRequired()])
     radio_fields = RadioField('Which sessions did you find most beneficial?', choices=[('Scholarship'), ('Professional mentorship'), ('ICT Innovation')], validators=[DataRequired()])
     check_fields = MultiCheckboxField('Which segment should we improve on?', choices=[('Scholarship'), ('Professional mentorship'), ('ICT Innovation')], validators=[DataRequired()], render_kw={'class': 'some-selector', 'style': 'border:none;'})
-    comments = CKEditorField("We would appreciate any additional feedback")
-    submit = SubmitField('Submit')
+    comments = CKEditorField("We would appreciate any additional feedback", render_kw={'class':'control-label'})
+    submit = SubmitField('Submit', render_kw={'style': 'align-items:center'})
 
 class SurveyData(db.Model):
     id = db.Column(db.Integer, primary_key=True)

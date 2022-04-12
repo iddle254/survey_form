@@ -16,6 +16,9 @@ font-size: 2rem;
 .bg-gray-200 {
   background-color: #f0f2f5 !important;
 }
+.control-label:last-of-type{
+margin-top: 30px !important;
+}
 .container {
   width: 100%;
   padding-right: var(--bs-gutter-x, 1.5rem);
