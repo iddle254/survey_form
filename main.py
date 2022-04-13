@@ -31,7 +31,7 @@ class SurveyForm(FlaskForm):
     radio_fields = RadioField('Which sessions did you find most beneficial?', choices=[('Scholarship'), ('Professional mentorship'), ('ICT Innovation')], validators=[DataRequired()])
     check_fields = MultiCheckboxField('Which segment should we improve on?', choices=[('Scholarship'), ('Professional mentorship'), ('ICT Innovation')], validators=[DataRequired()], render_kw={'class': 'some-selector', 'style': 'border:none;'})
     comments = CKEditorField("We would appreciate any additional feedback", render_kw={'class':'control-label'})
-    submit = SubmitField('Submit', render_kw={'style': 'align-items:center'})
+    submit = SubmitField('Submit', render_kw={'class': 'btn bg-gradient-primary w-100 my-4 mb-2'})
 
 class SurveyData(db.Model):
     id = db.Column(db.Integer, primary_key=True)

@@ -303,7 +303,7 @@ margin-top: 7rem;
   display: inline-block;
   font-weight: 700;
   line-height: 1.667;
-  color: #7b809a;
+  color: #000 !important;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -344,7 +344,7 @@ margin-top: 7rem;
   }
 }
 .btn:hover {
-  color: #7b809a;
+  color: white !important;
 }
 .btn:focus {
   outline: 0;

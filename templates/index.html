@@ -38,6 +38,8 @@
                     {% endwith %}
 <!--                    {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}-->
 <!--                    <h3>{{ form.name.label }}</h3>-->
+                    <form method="POST" action="{{ url_for('submit') }}" novalidate>
+                        {{ form.csrf_token }}
                     <p>{{ wtf.form_field(form.name) }}</p>
 
 <!--                    <h3>{{ form.email.label }}</h3>-->
@@ -57,6 +59,11 @@
 
 <!--                    <h3>{{ form.comments.label }}</h3>-->
                     <p style="margin-top:60px;">{{ wtf.form_field(form.comments) }}</p>
+
+                        <div style="text-align:center">
+                            {{form.submit}}
+                        </div>
+                </form>
                 </div>
               </div>
             </div>
